@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Authentication</title>
+    <link rel="stylesheet" type="text/css" href="userauthentication.css">
+</head>
+<body style="background-image: url('background.jpg') no-repeat center center/cover;" >
+    <div class="container">            
+        <div class="input-fields">
+            <div class="header">
+                <h2>Sign Up</h2>
+            </div>
+            <form id="signup-form">
+                <span><label>First Name</label></span>
+                <div><input type="text" id="firstname" name="firstname" required autocomplete="off">
+                    <p id="firstname-error" style="color: red;"></p>
+                </div>
+               
+                <span><label>Last Name</label></span>
+                <div><input type="text" id="lastname" name="lastname" required autocomplete="off">
+                    <p id="lastname-error" style="color: red;"></p>
+                </div>
+                
+                <span><label>Email</label></span>
+                <div><input type="email" id="email" name="email" required autocomplete="off"></div>
+                <span><label>Password</label></span>
+                <div style="position: relative;">
+                    <input type="password" id="password" name="password" autocomplete="off" style="width: 100%; padding-right: 40px;" required>
+                
+                <span id="show-hide" style="position: absolute; right: 10px; top: 10px;transform: translateY(-1%); cursor: pointer; font-size: 20px;visibility: hidden;">👁️</span>
+                </div>
+                <div><span id="password-error" style="color: red; font-size: 14px;"></span></div>
+
+                <span><label>Confirm Password</label></span>
+                
+                <div><input type="password" id="confirmpassword" name="confirmpassword" required autocomplete="off"></div>
+                <div><button type="submit" id="submit" name="submit">Sign up</button></div>
+            </form>
+            <p>Already have an account? <a href="login.html">Login</a></p>
+        </div>
+    </div>
+    <script src="signin.js?v=2" type="module"></script>
+
+</body>
+</html>
