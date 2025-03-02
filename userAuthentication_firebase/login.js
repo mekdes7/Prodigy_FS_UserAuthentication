@@ -7,9 +7,9 @@ async function initializeFirebase() {
         if (!response.ok) throw new Error("Failed to fetch Firebase config");
 
         const firebaseConfig = await response.json();
-        console.log("Firebase Config:", firebaseConfig); // ✅ Debugging
+        console.log("Firebase Config:", firebaseConfig); 
 
-        // Initialize Firebase
+       
         const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);
         console.log("Firebase initialized successfully!");
@@ -19,7 +19,7 @@ async function initializeFirebase() {
     }
 }
 
-// Call initializeFirebase and store auth globally
+
 let auth;
 initializeFirebase().then((firebaseAuth) => {
     auth = firebaseAuth;

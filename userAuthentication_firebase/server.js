@@ -17,7 +17,7 @@ const firebaseConfig = {
     measurementId: process.env.MEASUREMENT_ID,
 };
 
-// Route to provide Firebase config
+
 app.get("/getFirebaseConfig", (req, res) => {
     res.json(firebaseConfig);
 });

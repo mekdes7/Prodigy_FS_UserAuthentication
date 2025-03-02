@@ -1,7 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
 import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
 
-// Fetch Firebase config from the server
+
 async function initializeFirebase() {
     try {
        const response = await fetch('http://localhost:5000/getFirebaseConfig');
@@ -9,7 +9,7 @@ async function initializeFirebase() {
         if (!response.ok) throw new Error("Failed to fetch Firebase config");
         const firebaseConfig = await response.json();
 
-        // Initialize Firebase
+      
         const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);
         console.log("Firebase initialized successfully!");
@@ -19,19 +19,19 @@ async function initializeFirebase() {
     }
 }
 
-// Call initializeFirebase and store auth globally
+
 let auth;
 initializeFirebase().then((firebaseAuth) => {
     auth = firebaseAuth;
 });
 
-// Validate Name
+
 function validateName(name) {
     const namePattern = /^[A-Za-z\s]+$/;
     return namePattern.test(name.trim()) ? null : "Name must contain only letters and spaces.";
 }
 
-// Attach event listeners for input validation
+
 document.getElementById("firstname").addEventListener("input", (e) => {
     document.getElementById("firstname-error").textContent = validateName(e.target.value) || "";
 });
@@ -40,7 +40,7 @@ document.getElementById("lastname").addEventListener("input", (e) => {
     document.getElementById("lastname-error").textContent = validateName(e.target.value) || "";
 });
 
-// Validate Password
+
 function validatePassword(password) {
     const minLength = 8;
     const hasUpperCase = /[A-Z]/.test(password);
@@ -56,12 +56,12 @@ function validatePassword(password) {
     return null;
 }
 
-// Validate password input
+
 document.getElementById("password").addEventListener("input", (e) => {
     document.getElementById("password-error").textContent = validatePassword(e.target.value) || "";
 });
 
-// Password toggle visibility
+
 document.addEventListener("DOMContentLoaded", function () {
     const passwordInput = document.getElementById("password");
     const toggleIcon = document.getElementById("show-hide");
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Sign-up event listener
+
 document.getElementById("signup-form").addEventListener("submit", async (e) => {
     e.preventDefault();
     console.log("Sign-up form submitted!");
