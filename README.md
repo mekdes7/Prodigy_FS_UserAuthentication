@@ -29,25 +29,9 @@ Both projects demonstrate implementing secure and scalable authentication system
 
 ---
 
-## Project 2: User Authentication with Firebase
+## Installation 🚀
 
-### Features ✨
-- User registration and login with email/password.
--Input validation
-- Real-time database using Firebase Firestore.
-
-
-### Technologies Used 🛠️
-- **Frontend:** HTML, CSS, JavaScript
-- **Backend:** Node.js.
-- **Database:** Firebase Authentication, Firebase Firestore.
-
-
-
----
-
-
-
-
-
-
+### Firebase Authentication
+1. Navigate to the Firebase project folder:
+   ```bash
+   cd firebase-auth
