@@ -42,17 +42,4 @@ Both projects demonstrate implementing secure and scalable authentication system
 - **Backend:** Node.js.
 - **Database:** Firebase Authentication, Firebase Firestore.
 
-
-
 ---
-
-
-
-
-
-## Installation 🚀
-
-### Firebase Authentication
-1. Navigate to the Firebase project folder:
-   ```bash
-   cd firebase-auth
